@@ -1,0 +1,19 @@
+<html>
+<body>
+Welcome, {{username}}!
+<form action="create-beer" method="post">
+    <input type="text" placeholder="Beer name" name="beername"/>
+    <select name="beertype">
+        <option value="Ale">Ale</option>
+        <option value="Lager">lager</option>
+        <option value="Pilsner">Pilsner</option>
+        <option value="Stoud">Stoud</option>
+        <option value="Other">Other</option>
+    </select>
+    <button typ="submit">Submit</button>
+</form>
+{{#beers}}
+{{id}}. {{name}} - {{type}}<br>
+{{/beers}}
+</body>
+</html>
